@@ -1,10 +1,18 @@
 body {
-    background-color: #FCF300;
+    background-color: #ffd60a;
     text-align: center;
     font-family: Arial,  sans-serif;
     text-align: center; 
-    margin-top: 30px; 
+    margin-top: 0px;
 
+}
+
+.head-tag{ 
+    background-color: #ffb703;
+    display:flex;
+    flex-direction: column-reverse;
+    flex-shrink: auto;
+    
 }
 
 
@@ -12,6 +20,21 @@ title{
     color: #FFC600;
 }
 
-div{
+span{
+    display:inline-block;
+    background-color:white;
+    width: 500px;
+    height: 200px;
+    text-align: center;
+    border: 6px solid black;
+    padding: 5px;
+}
 
+.input-field{
+    text-align:right;
+    margin-top: 10px;
+    padding-top: none;
+    padding-right: 115px;
+    border-right: 50px;
+    
 }

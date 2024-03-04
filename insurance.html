@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insurance Premium Calculator</title>
+<style>
+  /* Style for the body */
+  body {
+    font-family: Arial, sans-serif; /* Set font family */
+    text-align: center; /* Center align text */
+  }
+  
+  /* Style for input fields */
+  .input-field {
+    margin-bottom: 20px; /* Add margin to bottom */
+  }
+  
+  /* Style for premium amount */
+  #premium {
+    font-size: 24px; /* Set font size */
+    font-weight: bold; /* Set font weight to bold */
+    color: #4CAF50; /* Green color */
+  }
+</style>
+</head>
+<body>
+  <!-- Title -->
+  <h2>Insurance Premium Calculator</h2>
+  
+  <!-- Input field for current year -->
+  <div class="input-field">
+    <label for="currentYear">Enter current year:</label> <!-- Label for current year input field -->
+    <input type="number" id="currentYear"> <!-- Input field for current year -->
+  </div>
+  
+  <!-- Input field for birth year -->
+  <div class="input-field">
+    <label for="birthYear">Enter birth year:</label> <!-- Label for birth year input field -->
+    <input type="number" id="birthYear"> <!-- Input field for birth year -->
+  </div>
+  
+  <!-- Button to calculate premium -->
+  <button onclick="calculatePremium()">Calculate Premium</button>
+  
+  <!-- Element to display premium -->
+  <div id="premium"></div>
+
+  <!-- JavaScript code -->
+  <script>
+    // Function to calculate premium
+    function calculatePremium() {
+      // Get current year input value
+      var currentYear = parseInt(document.getElementById("currentYear").value);
+
+      // Get birth year input value
+      var birthYear = parseInt(document.getElementById("birthYear").value);
+
+      // Calculate age
+      var age = currentYear - birthYear;
+
+      // Calculate premium
+      var decades = Math.floor(age / 10); // Calculate decades
+      var premium = (decades + 15) * 20; // Calculate premium amount
+
+      // Display premium
+      document.getElementById("premium").innerText = "Premium amount: $" + premium;
+    }
+  </script>
+</body>
+</html>
